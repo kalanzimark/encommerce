@@ -80,6 +80,7 @@ function Products() {
                                     style={{
                                         color: "blue",
                                         marginLeft: "3px",
+                                        cursor: "pointer",
                                         textDecoration: "none",
                                         fontWeight: "bold",
                                     }}
@@ -114,6 +115,7 @@ function Products() {
                                     style={{
                                         color: "blue",
                                         marginLeft: "3px",
+                                        cursor: "pointer",
                                         textDecoration: "none",
                                         fontWeight: "bold",
                                     }}
@@ -148,6 +150,7 @@ function Products() {
                                     style={{
                                         color: "blue",
                                         marginLeft: "3px",
+                                        cursor: "pointer",
                                         textDecoration: "none",
                                         fontWeight: "bold",
                                     }}
@@ -182,6 +185,7 @@ function Products() {
                                     style={{
                                         color: "blue",
                                         marginLeft: "3px",
+                                        cursor: "pointer",
                                         textDecoration: "none",
                                         fontWeight: "bold",
                                     }}
@@ -216,6 +220,7 @@ function Products() {
                                     style={{
                                         color: "blue",
                                         marginLeft: "3px",
+                                        cursor: "pointer",
                                         textDecoration: "none",
                                         fontWeight: "bold",
                                     }}
@@ -250,6 +255,7 @@ function Products() {
                                     style={{
                                         color: "blue",
                                         marginLeft: "3px",
+                                        cursor: "pointer",
                                         textDecoration: "none",
                                         fontWeight: "bold",
                                     }}
