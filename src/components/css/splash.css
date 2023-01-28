@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body {
+    height: 100vh;
+    background: rgb(171, 24, 127);
+    background: linear-gradient(
+        180deg,
+        rgba(171, 24, 127, 1) 15%,
+        rgba(0, 212, 255, 1) 84%
+    );
+}
+
+.container {
+    width: 90%;
+    max-width: 430px;
+    margin: auto;
+}
+.logo {
+    width: 100%;
+}
+main {
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    color: white;
+    font-weight: 800;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company_desc {
+    margin-top: 1em;
+    padding: 5px;
+    width: 79%;
+}
+h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+p {
+    color: #d8d5d5;
+    text-align: center;
+    font-size: 0.94rem;
+}
+button {
+    border: 0;
+    width: 40%;
+    margin: auto;
+}
+.buttons {
+    width: 79%;
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-around;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.login,
+.signup {
+    font-size: 1.5rem;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+.login {
+    background-color: #841068;
+}
+.login a {
+    font-weight: 600;
+    color: #f6f1f1;
+}
