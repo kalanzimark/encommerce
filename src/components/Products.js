@@ -22,6 +22,7 @@ import product4 from "./assets/product4.png";
 import product5 from "./assets/product5.png";
 import product6 from "./assets/product6.png";
 import { Link } from "react-router-dom";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 function Products() {
     return (
@@ -124,7 +125,7 @@ function Products() {
                                 </Link>
                             </p>
                             <ProductFooter>
-                                <i class="fa-solid fa-user"></i>
+                                <FavoriteIcon />
                                 <div>
                                     <p>staricon</p>
                                 </div>
@@ -194,7 +195,7 @@ function Products() {
                                 </Link>
                             </p>
                             <ProductFooter>
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-coffee fa-xl"></i>
                                 <div>
                                     <p>staricon</p>
                                 </div>
@@ -229,7 +230,8 @@ function Products() {
                                 </Link>
                             </p>
                             <ProductFooter>
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fas fa-heart"></i>
+
                                 <div>
                                     <p>staricon</p>
                                 </div>

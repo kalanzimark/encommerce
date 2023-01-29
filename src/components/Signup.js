@@ -96,7 +96,19 @@ function Signup() {
                             aria-placeholder="confirm password"
                         />
                         <button className="login_btn_sp">
-                            <Link to={user.firstName && accessTo}>Sign Up</Link>
+                            <Link
+                                to={
+                                    user.firstName &&
+                                    user.email &&
+                                    user.confirmPassword &&
+                                    user.password &&
+                                    user.country &&
+                                    user.lastName &&
+                                    accessTo
+                                }
+                            >
+                                Sign Up
+                            </Link>
                         </button>
                         <p>
                             Already have an account?{" "}
