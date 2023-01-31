@@ -126,12 +126,13 @@ export const ImageWrapper = styled.div`
     height: 150px;
     border-radius: 10px;
     display: flex;
-    outline: 3px solid white;
+
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
     img {
         max-width: 100%;
+        object-fit: contain;
         max-height: 100%;
     }
 `;
