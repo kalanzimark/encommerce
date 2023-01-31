@@ -21,10 +21,12 @@ import {
 } from "./css/productInfo_styled";
 
 import product1 from "./assets/product1.png";
+import Footer from "./Footer";
 
 function ProductInfo() {
     const [trimInfo, setTrimInfo] = useState(false);
     const [isFavourite, setIsFavourite] = useState(false);
+    const colour = { default: "black", current: "red" };
     const info =
         "Lorem ipsum dolor sit amet consectetur. Massa ut innon sollicitudin volutpat sit convallis orcipellentesque. Accumsan ipsum velit maecenas pretium pretium ac. Etiam dolor eget netus venenatis ametenim nunc urna. Elit at scelerisque quis ultricies sagittis maecenas pellentesque";
 
@@ -156,6 +158,7 @@ function ProductInfo() {
                         <div>Buy</div>
                     </OrderSection>
                 </ProductSection>
+                <Footer />
             </Container>
         </>
     );

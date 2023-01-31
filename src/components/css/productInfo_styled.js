@@ -6,7 +6,9 @@ export const Container = styled.div`
     max-width: 430px;
     margin: auto;
     background: #dbd8da;
+    position: relative;
     overflow-y: scroll;
+    outline: 5px solid red;
 `;
 export const ProductHeader = styled.div``;
 
@@ -51,6 +53,7 @@ export const ProductSection = styled.div`
     margin-top: 5px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 6.5em;
 `;
 
 export const MainProductWrapper = styled.div`

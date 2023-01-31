@@ -26,6 +26,7 @@ import product4 from "./assets/product4.png";
 import product5 from "./assets/product5.png";
 import product6 from "./assets/product6.png";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 function Products() {
     const [isFavourite, setIsFavourite] = useState(false);
@@ -130,6 +131,7 @@ function Products() {
                             </ProductFooter>
                         </ProductDetails>
                     </MainProduct>
+
                     <MainProduct>
                         <ProductPrice>
                             <p>$200</p>
@@ -376,6 +378,7 @@ function Products() {
                         </ProductDetails>
                     </MainProduct>
                 </ProductSection>
+                <Footer />
             </Container>
         </>
     );

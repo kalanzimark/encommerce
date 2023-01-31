@@ -7,6 +7,8 @@ export const Container = styled.div`
     margin: auto;
     background: #dbd8da;
     overflow-y: scroll;
+    position: relative;
+    z-index: 2;
 `;
 export const ProductHeader = styled.div``;
 
@@ -119,16 +121,18 @@ export const MainProduct = styled.div`
     border-radius: 10px;
 `;
 export const ImageWrapper = styled.div`
-    width: 60%;
+    width: 100%;
     min-width: 100px;
-    min-height: 150px;
-    object-fit: contain;
+    height: 150px;
     border-radius: 10px;
     display: flex;
+    outline: 3px solid white;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
     img {
         max-width: 100%;
+        max-height: 100%;
     }
 `;
 export const ProductDetails = styled.div`
