@@ -120,6 +120,7 @@ function ProductInfo() {
                             style={{
                                 fontSize: "3.43rem",
                                 marginTop: "6px",
+                                cursor: "pointer",
                                 color: "red",
                             }}
                             onClick={() => setIsFavourite(!isFavourite)}
