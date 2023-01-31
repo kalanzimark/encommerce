@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    * {
-        all: revert;
-    }
     height: 100vh;
     width: 90%;
     max-width: 430px;
@@ -20,16 +17,35 @@ export const ProductContainer = styled.div`
 export const TimeSection = styled.div`
     display: flex;
     justify-content: space-between;
+    padding: 1em 0 0.4em 0;
+    p {
+        font-weight: 700;
+    }
 `;
 export const TopSection = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1em 0 0.6em 0;
+    margin-bottom: 25px;
     p {
-        font-size: 0.93rem;
+        font-size: 0.95rem;
         font-weight: 500;
     }
 `;
-
+export const CartWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    p:last-child {
+        font-size: 0.9rem;
+        color: red;
+        align-self: flex-start;
+        font-weight: bold;
+        margin-top: -7px;
+    }
+`;
 export const ProductSection = styled.div`
     padding: 17px;
     margin-top: 5px;
@@ -51,7 +67,6 @@ export const MainProduct = styled.div`
     border-radius: 10px; */
 `;
 export const ImageWrapper = styled.div`
-    border: 2px solid orange;
     width: 60%;
     margin: 15px auto 0 auto;
     display: flex;
@@ -111,12 +126,15 @@ export const InfoSection = styled.div`
     display: grid;
     grid-auto-columns: auto;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 12px;
+    margin-top: 7px;
 `;
 export const Rating = styled.div`
     display: flex;
     margin: 0;
     justify-content: flex-start;
     align-items: center;
+
     p {
         font-weight: 500;
         margin-right: 12px;
@@ -152,6 +170,8 @@ export const Description = styled.div`
 `;
 export const Reviews = styled.div`
     border-bottom: 0.5px solid #a7a6a7;
+    margin-top: 15px;
+    margin-bottom: 10px;
 
     h3 {
         font-size: 1rem;
@@ -169,11 +189,11 @@ export const OrderSection = styled.div`
         font-weight: 700;
         font-size: 1.5rem;
     }
-    button {
+    div {
         background-color: #6b2b68;
-        padding: 8px 3em;
-        border: none;
+        padding: 8px 3.5em;
         color: white;
+        font-size: 11px;
         border-radius: 10px;
     }
 `;

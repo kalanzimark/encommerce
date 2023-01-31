@@ -8,7 +8,11 @@ function Splash() {
             <div className="container">
                 <header>
                     <p>19:20</p>
-                    <p>others</p>
+                    <p className="header_icons">
+                        <i class="fa-solid fa-wifi fa-sm"></i>
+                        <i class="fa-solid fa-signal fa-sm"></i>
+                        <i class="fa-solid fa-battery-half fa-lg"></i>
+                    </p>
                 </header>
                 <main>
                     <div className="img_container">

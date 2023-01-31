@@ -65,7 +65,7 @@ form {
     width: 85%;
     margin: auto;
 }
-input {
+.signup_form input {
     display: block;
     width: 100%;
     font-size: 1.25rem;

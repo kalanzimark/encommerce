@@ -60,7 +60,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-.form_title_lg p {
+.form_title_lg > p {
     color: #3c1045;
     font-size: 2rem;
     font-weight: 600;
@@ -70,7 +70,7 @@ form {
     width: 85%;
     margin: 0 auto;
 }
-input {
+.login_form input {
     display: block;
     width: 100%;
     font-size: 1.25rem;
@@ -84,7 +84,7 @@ input {
     color: #2c2a2a;
     opacity: 45%;
 }
-input:nth-child(1) {
+.login_form > input:nth-child(1) {
     margin-top: 2px;
 }
 
@@ -99,12 +99,12 @@ input:nth-child(1) {
     margin-top: 22px;
 }
 
-form > p {
+.Login_form > p {
     color: black;
     text-align: center;
     font-size: 1rem;
     margin-top: 25px;
 }
-form > p > a {
+Login_form > p > a {
     text-decoration: none;
 }

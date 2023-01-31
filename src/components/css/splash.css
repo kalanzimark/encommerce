@@ -38,20 +38,24 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+.header_icons > * {
+    display: inline-block;
+    margin-right: 5px;
+}
 
 .company_desc {
     margin-top: 1em;
     padding: 5px;
     width: 79%;
 }
-h2 {
+.company_desc > h2 {
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 0.3em;
     text-align: center;
 }
-p {
+.company_desc > p {
     color: #d8d5d5;
     text-align: center;
     font-size: 0.94rem;

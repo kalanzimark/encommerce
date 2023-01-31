@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    * {
-        all: revert;
-    }
     height: 100vh;
     width: 90%;
     max-width: 430px;
@@ -20,24 +17,56 @@ export const ProductContainer = styled.div`
 export const TimeSection = styled.div`
     display: flex;
     justify-content: space-between;
+    padding: 1em 0 0.4em 0;
+    p {
+        font-weight: 700;
+    }
 `;
 export const CartSection = styled.div`
     display: flex;
     justify-content: space-between;
+    padding: 1em 0 0.6em 0;
+    p {
+        font-size: 25px;
+        color: #603872;
+    }
 `;
+export const CartWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    p:last-child {
+        font-size: 0.9rem;
+        color: red;
+        align-self: flex-start;
+        font-weight: bold;
+        margin-top: -7px;
+    }
+`;
+
 export const InputSection = styled.div`
     display: flex;
+    border-radius: 15px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+
     input {
-        width: 100%;
+        width: 80%;
         margin: auto;
-        font-size: 0.9rem;
-        border-radius: 15px;
-        padding: 12px;
+        font-size: 0.95rem;
+        padding: 0.8em 0 0.8em 0;
         border: none;
     }
     ::placeholder {
         color: #000000;
         opacity: 45%;
+    }
+    p {
+        margin: auto;
+        color: #4d4d4d;
+        opacity: 55%;
     }
 `;
 
@@ -45,6 +74,8 @@ export const SearchDetails = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 500;
+    padding: 10px;
     font-size: 12px;
     select {
         border: none;
@@ -56,9 +87,9 @@ export const ProductSection = styled.div`
     padding: 17px;
     margin-top: 5px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(182px, 1fr));
+    justify-items: center;
     gap: 7px;
 `;
 
@@ -102,12 +133,12 @@ export const ImageWrapper = styled.div`
 `;
 export const ProductDetails = styled.div`
     h4 {
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-bottom: 2px;
     }
     p {
         margin-top: 0;
-        font-size: 0.75rem;
+        font-size: 0.65rem;
         color: #383737;
         opacity: 81%;
     }
@@ -116,20 +147,26 @@ export const ProductFooter = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 12px 0 7px 0;
     margin-bottom: 5px;
-
+`;
+export const HeartIcon = styled.div`
+    color: red;
+    cursor: pointer;
+`;
+export const Stars = styled.div`
+    color: gold;
+`;
+export const ProductButton = styled.div`
+    padding: 5px 1em;
+    border-radius: 0.85em;
+    background-color: #6c2966;
+    border: none;
     p {
-        margin: 0;
-        padding: 0;
-        color: #6c2966;
-    }
-
-    button {
-        color: #fffbfb;
-        padding: 5px 1em;
-        border-radius: 0.85em;
-        background-color: #6c2966;
-        border: none;
+        color: white;
+        font-weight: 700;
+        opacity: 100%;
     }
 `;
+
 export const Footer = styled.div``;

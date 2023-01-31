@@ -17,15 +17,16 @@ import {
     Favourite_icon,
     Reviews,
     OrderSection,
+    CartWrapper,
 } from "./css/productInfo_styled";
 
 import product1 from "./assets/product1.png";
 
 function ProductInfo() {
+    const [trimInfo, setTrimInfo] = useState(false);
+    const [isFavourite, setIsFavourite] = useState(false);
     const info =
         "Lorem ipsum dolor sit amet consectetur. Massa ut innon sollicitudin volutpat sit convallis orcipellentesque. Accumsan ipsum velit maecenas pretium pretium ac. Etiam dolor eget netus venenatis ametenim nunc urna. Elit at scelerisque quis ultricies sagittis maecenas pellentesque";
-
-    const [trimInfo, setTrimInfo] = useState(false);
 
     return (
         <>
@@ -34,23 +35,60 @@ function ProductInfo() {
                     <ProductHeader>
                         <TimeSection>
                             <p>19:20</p>
-                            <p>others</p>
+                            <p className="header_icons">
+                                <i class="fa-solid fa-wifi fa-sm"></i>
+                                <i class="fa-solid fa-signal fa-sm"></i>
+                                <i class="fa-solid fa-battery-half fa-lg"></i>
+                            </p>
                         </TimeSection>
                         <TopSection>
-                            <p>lefticon</p>
+                            <p
+                                style={{
+                                    fontSize: "1.56em",
+                                    color: "#603872",
+                                }}
+                            >
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </p>
                             <p>Product Details</p>
-                            <p>rightcart</p>
+                            <CartWrapper>
+                                <p
+                                    style={{
+                                        fontSize: "1.56em",
+                                        color: "#603872",
+                                    }}
+                                >
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </p>
+                                <p>3</p>
+                            </CartWrapper>
                         </TopSection>
                     </ProductHeader>
                 </ProductContainer>
                 <ProductSection>
                     <MainProductWrapper>
                         <MainProduct>
-                            <p>left</p>
+                            <p
+                                style={{
+                                    color: "#603872",
+                                    fontSize: "25px",
+                                    opacity: "55%",
+                                }}
+                            >
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </p>
                             <ImageWrapper>
                                 <img src={product1} alt="product1" />
                             </ImageWrapper>
-                            <p>right</p>
+                            <p
+                                style={{
+                                    color: "#603872",
+                                    fontSize: "25px",
+                                    opacity: "55%",
+                                }}
+                            >
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </p>
                         </MainProduct>
                         <ImageLapse>
                             <div></div>
@@ -61,15 +99,36 @@ function ProductInfo() {
                     <InfoSection>
                         <div>
                             <Rating>
-                                <p>Rating</p>
-                                <p>stars icons</p>
+                                <p style={{ fontWeight: "bold" }}>Rating</p>
+                                <p
+                                    style={{
+                                        color: "gold",
+                                    }}
+                                >
+                                    <i class="fa-solid fa-star fa-lg"></i>
+                                    <i class="fa-solid fa-star fa-lg"></i>
+                                    <i class="fa-solid fa-star fa-lg"></i>
+                                    <i class="fa-solid fa-star fa-lg"></i>
+                                    <i class="fa-solid fa-star fa-lg"></i>
+                                </p>
                             </Rating>
                             <ProductTitle>
                                 <h4>Beats by Dre</h4>
                             </ProductTitle>
                         </div>
-                        <Favourite_icon>
-                            <h1>Heart</h1>
+                        <Favourite_icon
+                            style={{
+                                fontSize: "3.43rem",
+                                marginTop: "6px",
+                                color: "red",
+                            }}
+                            onClick={() => setIsFavourite(!isFavourite)}
+                        >
+                            {isFavourite ? (
+                                <i class="fa-solid fa-heart"></i>
+                            ) : (
+                                <i class="fa-regular fa-heart"></i>
+                            )}
                         </Favourite_icon>
                     </InfoSection>
                     <Description>
@@ -80,11 +139,12 @@ function ProductInfo() {
                             style={{
                                 fontSize: "0.75rem",
                                 color: "blue",
+                                fontWeight: "500",
                                 cursor: "pointer",
                             }}
                             onClick={() => setTrimInfo(!trimInfo)}
                         >
-                            {trimInfo ? "show less" : "read more..."}
+                            {trimInfo ? "Show less" : "Read more..."}
                         </span>
                     </Description>
                     <Reviews>
@@ -92,7 +152,7 @@ function ProductInfo() {
                     </Reviews>
                     <OrderSection>
                         <p>$200</p>
-                        <button>Buy</button>
+                        <div>Buy</div>
                     </OrderSection>
                 </ProductSection>
             </Container>

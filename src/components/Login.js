@@ -8,11 +8,11 @@ function Login() {
     const [password, setpassword] = useState("");
     const [access, setAccess] = useState(false);
     const accessTo = "/products";
-    const handleAccess = () => {
-        if (email && password) {
-            setAccess(true);
-        }
-    };
+    // const handleAccess = () => {
+    //     if (email && password) {
+    //         setAccess(true);
+    //     }
+    // };
     const handleSubmit = (e) => {
         e.preventDefault();
     };
@@ -23,7 +23,11 @@ function Login() {
                 <div className="header_section_lg">
                     <div className="header_section_top_lg">
                         <p>19:20</p>
-                        <p>others</p>
+                        <p className="header_icons">
+                            <i class="fa-solid fa-wifi fa-sm"></i>
+                            <i class="fa-solid fa-signal fa-sm"></i>
+                            <i class="fa-solid fa-battery-half fa-lg"></i>
+                        </p>
                     </div>
                     <div className="img_container_lg">
                         <Link to="/">
