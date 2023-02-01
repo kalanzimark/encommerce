@@ -126,7 +126,6 @@ export const ImageWrapper = styled.div`
     height: 150px;
     border-radius: 10px;
     display: flex;
-
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
@@ -138,7 +137,7 @@ export const ImageWrapper = styled.div`
 `;
 export const ProductDetails = styled.div`
     h4 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin-bottom: 2px;
     }
     p {
@@ -160,6 +159,7 @@ export const HeartIcon = styled.div`
     cursor: pointer;
 `;
 export const Stars = styled.div`
+    font-size: 0.75rem;
     color: gold;
 `;
 export const ProductButton = styled.div`

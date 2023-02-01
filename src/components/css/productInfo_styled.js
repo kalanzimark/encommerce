@@ -71,6 +71,8 @@ export const MainProduct = styled.div`
 `;
 export const ImageWrapper = styled.div`
     width: 60%;
+    min-height: 275px;
+    min-width: 206px;
     margin: 15px auto 0 auto;
     display: flex;
     align-items: center;

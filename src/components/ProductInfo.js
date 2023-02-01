@@ -19,19 +19,24 @@ import {
     OrderSection,
     CartWrapper,
 } from "./css/productInfo_styled";
+import { useParams } from "react-router-dom";
+import products from "../data";
 
-import product1 from "./assets/product1.png";
 import Footer from "./Footer";
 
 function ProductInfo() {
+    const { id } = useParams();
+
     const [trimInfo, setTrimInfo] = useState(false);
     const [isFavourite, setIsFavourite] = useState(false);
-    const colour = { default: "black", current: "red" };
-    const info =
-        "Lorem ipsum dolor sit amet consectetur. Massa ut innon sollicitudin volutpat sit convallis orcipellentesque. Accumsan ipsum velit maecenas pretium pretium ac. Etiam dolor eget netus venenatis ametenim nunc urna. Elit at scelerisque quis ultricies sagittis maecenas pellentesque";
 
-    return (
-        <>
+    const myproduct = products.filter((product) => product.pid == id);
+    console.log(products);
+
+    return myproduct.map((product) => {
+        const { title, description, price, isfavourite, rating, img } = product;
+        const info = description;
+        return (
             <Container>
                 <ProductContainer>
                     <ProductHeader>
@@ -80,7 +85,7 @@ function ProductInfo() {
                                 <i class="fa-solid fa-chevron-left"></i>
                             </p>
                             <ImageWrapper>
-                                <img src={product1} alt="product1" />
+                                <img src={img} alt="product1" />
                             </ImageWrapper>
                             <p
                                 style={{
@@ -107,15 +112,17 @@ function ProductInfo() {
                                         color: "gold",
                                     }}
                                 >
-                                    <i class="fa-solid fa-star fa-lg"></i>
-                                    <i class="fa-solid fa-star fa-lg"></i>
-                                    <i class="fa-solid fa-star fa-lg"></i>
-                                    <i class="fa-solid fa-star fa-lg"></i>
-                                    <i class="fa-solid fa-star fa-lg"></i>
+                                    {Array(rating)
+                                        .fill()
+                                        .map((_, i) => {
+                                            return (
+                                                <i class="fa-solid fa-star fa-lg"></i>
+                                            );
+                                        })}
                                 </p>
                             </Rating>
                             <ProductTitle>
-                                <h4>Beats by Dre</h4>
+                                <h4>{title}</h4>
                             </ProductTitle>
                         </div>
                         <Favourite_icon
@@ -154,14 +161,14 @@ function ProductInfo() {
                         <h3>Reviews</h3>
                     </Reviews>
                     <OrderSection>
-                        <p>$200</p>
+                        <p>${price}</p>
                         <div>Buy</div>
                     </OrderSection>
                 </ProductSection>
                 <Footer />
             </Container>
-        </>
-    );
+        );
+    });
 }
 
 export default ProductInfo;
